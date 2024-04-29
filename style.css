@@ -1,0 +1,2026 @@
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GangwonEdu_OTFLightA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  cursor: url(cursor1.png), auto;
+}
+body, ul, li{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  color: #1f1f1f; 
+}
+p{
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.main-section{
+  height: 100vh;
+  background-image: url("background-img-desk.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main-section > .index-pin-box{
+  width: 100px; height: 100px;
+  position: absolute;
+  top:150px; right: 140px;
+  z-index: 1;
+}
+.main-section > .index-pin-box > img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.main-section > .index-memo-box{
+  width: 240px; height: 360px;
+  padding: 65px 40px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 220px; right: 70px;
+  background-color: #ffffff;
+}
+.main-section > .index-memo-box > ul{
+  display: flex;
+  flex-direction: column;
+}
+.main-section > .index-memo-box > ul > .index-list{
+  height: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.main-section > .index-memo-box > ul > .index-list-7{
+  margin-bottom: 0;
+}
+.main-section > .index-memo-box > ul > .index-list > a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main-section > .index-memo-box > ul > .index-list > a::after{
+  content: ''; 
+  width: 0; height: 1px;
+  background-color: #1f1f1f;
+  position: absolute;
+  bottom: 1px; left: 0;
+}
+.main-section > .index-memo-box > ul > .index-list > a:hover::after{
+  width: 100%;
+}
+.main-section > .index-memo-box > ul > .index-list > a > .list-name{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 24px;
+  cursor: url(cursor_1.png), auto;
+}
+.main-section>#flipbook{
+  position: relative;
+  width: 1200px;
+  height: 880px;
+  transform: translate3d(0px, 0px, 0px);
+  margin-left: -640px;
+}
+.page{
+  background-color: #fff;
+}
+.page-wrapper{
+  position: absolute;
+  overflow: hidden;
+  width: 600px;
+  height: 880px;
+  top: 0; 
+  left: 0;
+}
+/* 1page */
+.page1{
+  position: relative;
+}
+@keyframes bigSmall {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.page1>.click-box{
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 70px; height: 70px;
+  background-image: url("next-page.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation:bigSmall 2s ease-in Infinite Alternate;
+  cursor: url(cursor_1.png), auto;
+}
+.page1>.cover-img-box{
+  height: 100%;
+  background-image: url("dairy-cover.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.page1>.cover-img-box>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page1>.cover-img-box>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page1>.cover-img-box>.logo-rail{
+  width: 100%; height: 130px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 56%; left: 50%;
+  transform: translate(-50%, -56%);
+ }
+.page1>.cover-img-box>.logo-rail>.cover-logo-box{
+  width: 120px; height: 120px;
+  transition: 5s ease-in-out;
+}
+@keyframes duck {
+	0% {
+		top:0px;
+	}
+	to {
+		top:15px;
+	} 
+}
+.page1>.cover-img-box>.logo-rail>.cover-logo-box>.d-logo{
+  width: 100%; height: 100%;
+  position: relative;
+  top: 0;
+  animation:duck 1s ease-in Infinite Alternate;
+}
+.page1>.cover-img-box>.logo-rail:hover>.cover-logo-box{
+ transform: translateX(100%);
+}
+/* 2page */
+.page2{
+  background-color: #E5F5FE;
+}
+.page2>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page2>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page2>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page2>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+/* 3page */
+.page3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page3>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page3>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page3>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page3>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page3>.intro{
+  width: 600px; height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page3>.intro>.intro-img-box{
+  width: 120px; height: 120px;
+  margin-bottom: 40px;
+}
+.page3>.intro>.intro-img-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page3>.intro>.intro-text-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page3>.intro>.intro-text-box>.goal-title {
+  font-family: 'Gaegu', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.page3>.intro>.intro-text-box>.goal-content {
+  width: 350px;
+  padding: 10px 0;
+  font-family: 'Gaegu', sans-serif;
+  font-size: 26px;
+  animation: typing 4s 1.5s steps(22) infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {
+    width: 0
+  }
+} 
+/*  4page */
+.page4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page4>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page4>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page4>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page4>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page4>.page4-sticker-box{
+  position: absolute;
+  top: 136px; left: 235px;
+  width: 140px; height: 50px;
+}
+.page4>.page4-sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page4>.introduce-img-box{
+  width: 450px; height: 550px;
+}
+.page4>.introduce-img-box>img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+} 
+/*  5page */
+.page5>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page5>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page5>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page5>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page5>.container{
+  width: 530px;
+  margin-top: 84px;
+  margin-left: 70px;
+}
+.page5>.container>.aboutme-box{
+  margin-bottom: 36px;
+}
+.page5>.container>.aboutme-box>.title-aboutme{
+  margin-bottom: 28px;
+}
+.page5>.container>.aboutme-box>.title-aboutme>.aboutme-title{
+  font-family: 'Gaegu', sans-serif; 
+  font-size: 48px;
+  font-weight: bold;
+}
+.page5>.container>.aboutme-box>.aboutme-content>.info-list{
+  margin-bottom: 24px;
+}
+.page5>.container>.aboutme-box>.aboutme-content>.edu-career-list{
+  margin-bottom: 24px;
+}
+.page5>.container>.aboutme-box>.aboutme-content>.aboutlist>li {
+  display: flex;
+  margin-bottom: 8px;
+}
+.page5>.container>.aboutme-box>.aboutme-content>.aboutlist>.list-margin0{
+  margin: 0;
+}
+.page5>.container>.aboutme-box>.aboutme-content>.aboutlist>li>span{
+  font-family: 'GangwonEdu_OTFBoldA';
+  font-size: 18px;
+} 
+.page5>.container>.aboutme-box>.aboutme-content>.aboutlist>li>.list-title{
+  width: 110px; height: 25px;
+}
+.page5>.container>.aboutme-box>.aboutme-content>.aboutlist>li>.list-content{
+  width: 400px; height: 25px;
+  font-family: 'GangwonEdu_OTFLightA';
+}
+.page5>.container>.skills-box>.title-skills{
+  margin-bottom: 28px;
+}
+.page5>.container>.skills-box>.title-skills>.skills-title{
+  font-family: 'Gaegu', sans-serif; 
+  font-size: 48px;
+  font-weight: bold;
+}
+.page5>.container>.skills-box>.skills-content>ul{
+  display: flex;
+}
+.page5>.container>.skills-box>.skills-content>ul>li{
+  width: 32px; height: 35px;
+  margin-right: 24px;
+}
+.page5>.container>.skills-box>.skills-content>ul>li img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page6 */
+.page6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page6>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page6>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page6>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page6>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page6>.poster-box{
+  width: 600px; height: 880px;
+}
+.page6>.poster-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page7 */
+.page7>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page7>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page7>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page7>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page7>.book-ticker-img-1{
+  width: 100%; height: 100%;
+  background-image: url("redesign-g.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* page8 */
+.page8{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page8>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page8>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page8>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page8>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page8-sticker-box{
+  position: absolute;
+  width: 100px; height: 40px;
+  z-index: 1;
+}
+.page8-sticker-box-1{
+  transform: rotate(-45deg);
+  top: 40px; left: 10px;
+}
+.page8-sticker-box-2{
+  transform: rotate(-45deg);
+  bottom: 120px; right: 10px;
+}
+.page8-sticker-box img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page8>.page8-container>.redesign-img-box-1{
+  width: 500px; height: 700px;
+  border: 1px solid #F1F1F1;
+  margin-bottom: 50px;
+}
+.page8>.page8-container>.redesign-img-box-1 img{
+  width: 100%; height: 100%;
+}
+.page8>.page8-container>.pig-sticker-box{
+  position: absolute;
+  bottom: 50px; left: 50px;
+  width: 63px; height: 103px;
+  transform: rotate(-5deg);
+}
+.page8>.page8-container>.pig-sticker-box img{
+  width: 100%; height: 100%;
+}
+.page8>.page8-container>.text-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page8>.page8-container>.text-box .c-re-text{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+/* page9 */
+.page9{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page9>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page9>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page9>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page9>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page9>.container>.memo-box{
+  width: 500px; height: 650px;
+  background-image: url("memo-grid.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page9>.container>.memo-box>.memo-title-box{
+  width: 500px; height: 100px;
+  margin-bottom: 72px;
+  position: relative;
+}
+.page9>.container>.memo-box>.memo-title-box>.m-title{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  position: absolute;
+  top:30px; left: 50px;
+  z-index: 1;
+}
+.page9>.container>.memo-box>.memo-title-box>.highlighter{
+  width: 336px; height: 40px;
+  background-color: #fcdda0;
+  opacity: 0.5;
+  position: absolute;
+  top:60px; left: 90px;
+}
+.page9>.container>.memo-box>.memo-title-box:hover>.highlighter{
+  background-color: #F1A2A4;
+}
+.page9>.container>.memo-box>.memo-content-box{
+  margin-bottom: 52px;
+}
+.page9>.container>.memo-box>.memo-content-box>ul>.memo-content-row{
+  display: flex;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  font-size: 28px;
+}
+.page9>.container>.memo-box>.memo-content-box>ul>.memo-content-4row{
+  margin-bottom: 0;
+}
+.page9>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-title{
+  font-family: 'GangwonEdu_OTFBoldA';
+  width: 100px;
+  margin-right: 12px;
+}
+.page9>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-sub{
+  font-family: 'GangwonEdu_OTFLightA';
+}
+.page9>.container>.memo-box>.memo-sticker-box{
+  display: flex;
+  margin-left: 16px;
+}
+.page9>.container>.memo-box>.memo-sticker-box>.process-sticker{
+  margin-right: 48px;
+}
+.page9 .container .memo-box .memo-sticker-box>.original-sticker{
+  margin-right: 48px;
+}
+.page9>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker{
+  width: 80px; height: 80px;
+  background-image: url("C-sitcker-circle.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page9>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker> a{
+  width: 80px; height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url(cursor_1.png), auto;
+}
+.page9>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker> a>span{
+  font-family: 'GangwonEdu_OTFLightA';
+  font-size: 20px;
+  cursor: url(cursor_1.png), auto;
+}
+.page9>.container>.sticker-box{
+  width: 100px; height: 132px;
+  position: absolute;
+  bottom: 85px; right: 20px;
+}
+.page9>.container>.sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page10 */
+.page10{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page10>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page10>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page10>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page10>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page10-sticker-box{
+  position: absolute;
+  width: 100px; height: 40px;
+  z-index: 1;
+}
+.page10-sticker-box-1{
+  transform: rotate(-45deg);
+  top: 40px; left: 10px;
+}
+.page10-sticker-box-2{
+  transform: rotate(-45deg);
+  bottom: 120px; right: 10px;
+}
+.page10-sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page10>.page10-container>.redesign-img-box-1{
+  width: 500px; height: 700px;
+  border: 1px solid #F1F1F1;
+  margin-bottom: 50px;
+}
+.page10>.page10-container>.redesign-img-box-1>img{
+  width: 100%; height: 100%;
+}
+.page10>.page10-container>.pig-sticker-box{
+  position: absolute;
+  bottom: 70px; left: 40px;
+  width: 63px; height: 103px;
+  transform: rotate(-5deg);
+}
+.page10>.page10-container>.pig-sticker-box>img{
+  width: 100%; height: 100%;
+}
+.page10>.page10-container>.text-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page10>.page10-container>.text-box>.c-re-text{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+/* page11 */
+.page11{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page11>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page11>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page11>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page11>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page11>.container>.memo-box{
+  width: 500px; height: 650px;
+  background-image: url("memo-grid.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page11>.container>.memo-box>.memo-title-box{
+  width: 500px; height: 100px;
+  margin-bottom: 72px;
+  position: relative;
+}
+.page11>.container>.memo-box>.memo-title-box>.m-title{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  position: absolute;
+  top:30px; left: 50px;
+  z-index: 1;
+}
+.page11>.container>.memo-box>.memo-title-box>.highlighter{
+  width: 336px; height: 40px;
+  background-color: #fcdda0;
+  opacity: 0.5;
+  position: absolute;
+  top:60px; left: 90px;
+}
+.page11>.container>.memo-box>.memo-title-box:hover>.highlighter{
+  background-color: #FCE38C;
+}
+.page11>.container>.memo-box>.memo-content-box{
+  margin-bottom: 52px;
+}
+.page11>.container>.memo-box>.memo-content-box>ul>.memo-content-row{
+  display: flex;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  font-size: 28px;
+}
+.page11>.container>.memo-box>.memo-content-box>ul>.memo-content-4row{
+  margin-bottom: 0;
+}
+.page11>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-title{
+  font-family: 'GangwonEdu_OTFBoldA';
+  width: 100px;
+  margin-right: 12px;
+}
+.page11>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-sub{
+  font-family: 'GangwonEdu_OTFLightA';
+}
+.page11>.container>.memo-box>.memo-sticker-box{
+  display: flex;
+  margin-left: 16px;
+}
+.page11>.container>.memo-box>.memo-sticker-box>.process-sticker{
+  margin-right: 48px;
+}
+.page11>.container>.memo-box>.memo-sticker-box>.original-sticker{
+  margin-right: 48px;
+}
+.page11>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker{
+  width: 80px; height: 80px;
+  background-image: url("A-sitcker-circle.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page11>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker>a{
+  width: 80px; height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url(cursor_1.png), auto;
+}
+.page11>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker>a>span{
+  font-family: 'GangwonEdu_OTFLightA';
+  font-size: 20px;
+  cursor: url(cursor_1.png), auto;
+}
+.page11>.container>.sticker-box{
+  width: 100px; height: 132px;
+  position: absolute;
+  bottom: 85px; right: 20px;
+}
+.page11>.container>.sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page12 */
+.page12{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page12>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page12>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page12>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page12>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page12-sticker-box{
+  position: absolute;
+  width: 100px; height: 40px;
+  z-index: 1;
+}
+.page12-sticker-box-1{
+  transform: rotate(-45deg);
+  top: 40px; left: 10px;
+}
+.page12-sticker-box-2{
+  transform: rotate(-45deg);
+  bottom: 120px; right: 10px;
+}
+.page12-sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page12>.container>.redesign-img-box-1{
+  width: 500px; height: 700px;
+  border: 1px solid #F1F1F1;
+  margin-bottom: 50px;
+}
+.page12>.container>.redesign-img-box-1 img{
+  width: 100%; height: 100%;
+}
+.page12>.container>.pig-sticker-box{
+  position: absolute;
+  bottom: 60px; left: 110px;
+  width: 63px; height: 103px;
+  transform: rotate(-5deg);
+}
+.page12>.container>.pig-sticker-box img{
+  width: 100%; height: 100%;
+}
+.page12>.container>.text-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page12>.container>.text-box>.c-re-text{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+/* page13 */
+.page13{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page13>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page13>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page13>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page13>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page13>.container>.memo-box{
+  width: 500px; height: 650px;
+  background-image: url("memo-grid.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page13>.container>.memo-box>.memo-title-box{
+  width: 500px; height: 100px;
+  margin-bottom: 72px;
+  position: relative;
+}
+.page13>.container>.memo-box>.memo-title-box>.m-title{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  position: absolute;
+  top:30px; left: 50px;
+  z-index: 1;
+}
+.page13>.container>.memo-box>.memo-title-box>.highlighter{
+  width: 336px; height: 40px;
+  background-color: #fcdda0;
+  opacity: 0.5;
+  position: absolute;
+  top:60px; left: 90px;
+}
+.page13>.container>.memo-box>.memo-title-box:hover>.highlighter{
+  background-color: #91E9FB;
+}
+.page13>.container>.memo-box>.memo-content-box{
+  margin-bottom: 52px;
+}
+.page13>.container>.memo-box>.memo-content-box>ul>.memo-content-row{
+  display: flex;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  font-size: 28px;
+}
+.page13>.container>.memo-box>.memo-content-box>ul>.memo-content-4row{
+  margin-bottom: 0;
+}
+.page13>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-title{
+  font-family: 'GangwonEdu_OTFBoldA';
+  width: 100px;
+  margin-right: 12px;
+}
+.page13>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-sub{
+  font-family: 'GangwonEdu_OTFLightA';
+}
+.page13>.container>.memo-box>.memo-sticker-box{
+  display: flex;
+  margin-left: 16px;
+}
+.page13>.container>.memo-box>.memo-sticker-box>.process-sticker{
+  margin-right: 48px;
+}
+.page13>.container>.memo-box>.memo-sticker-box>.original-sticker{
+  margin-right: 48px;
+}
+.page13>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker{
+  width: 80px; height: 80px;
+  background-image: url("D-sitcker-circle.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page13>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker> a{
+  width: 80px; height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url(cursor_1.png), auto;
+}
+.page13>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker>a>span{
+  font-family: 'GangwonEdu_OTFLightA';
+  font-size: 20px;
+  cursor: url(cursor_1.png), auto;
+}
+.page13>.container>.sticker-box{
+  width: 100px; height: 132px;
+  position: absolute;
+  bottom: 85px; right: 20px;
+}
+.page13>.container>.sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page14 */
+.page14 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page14>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page14>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page14>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page14>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page14>.poster-box{
+  width: 600px; height: 880px;
+}
+.page14>.poster-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page15 */
+.page15>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page15>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page15>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page15>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page15>.book-ticker-img-2{
+  width: 100%; height: 100%;
+  background-image: url("appdesign-g.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* page16 */
+.page16{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page16>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page16>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page16>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page16>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page16-sticker-box{
+  position: absolute;
+  width: 100px; height: 40px;
+  z-index: 1;
+}
+.page16-sticker-box-1{
+  transform: rotate(-45deg);
+  top: 40px; left: 10px;
+}
+.page16-sticker-box-2{
+  transform: rotate(-45deg);
+  bottom: 120px; right: 10px;
+}
+.page16-sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page16>.container>.redesign-img-box-1{
+  width: 500px; height: 700px;
+  border: 1px solid #F1F1F1;
+  margin-bottom: 50px;
+}
+.page16>.container>.redesign-img-box-1>img{
+  width: 100%; height: 100%;
+}
+.page16>.container>.pig-sticker-box{
+  position: absolute;
+  bottom: 60px; left: 30px;
+  width: 63px; height: 103px;
+  transform: rotate(-5deg);
+}
+.page16>.container>.pig-sticker-box>img{
+  width: 100%; height: 100%;
+}
+.page16>.container>.text-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page16>.container>.text-box>.c-re-text{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+/* page17 */
+.page17{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page17>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page17>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page17>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page17>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page17>.container>.memo-box{
+  width: 500px; height: 650px;
+  background-image: url("memo-grid.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page17>.container>.memo-box>.memo-title-box{
+  width: 500px; height: 100px;
+  margin-bottom: 72px;
+  position: relative;
+}
+.page17>.container>.memo-box>.memo-title-box>.m-title{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  position: absolute;
+  top:30px; left: 50px;
+  z-index: 1;
+}
+.page17>.container>.memo-box>.memo-title-box>.highlighter{
+  width: 336px; height: 40px;
+  background-color: #fcdda0;
+  opacity: 0.5;
+  position: absolute;
+  top:60px; left: 90px;
+}
+.page17>.container>.memo-box>.memo-title-box:hover>.highlighter{
+  background-color: #A2E3F1;
+}
+.page17>.container>.memo-box>.memo-content-box{
+  margin-bottom: 52px;
+}
+.page17>.container>.memo-box>.memo-content-box>ul>.memo-content-row{
+  display: flex;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  font-size: 28px;
+}
+.page17>.container>.memo-box>.memo-content-box>ul>.memo-content-4row{
+  margin-bottom: 0;
+}
+.page17>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-title{
+  font-family: 'GangwonEdu_OTFBoldA';
+  width: 100px;
+  margin-right: 12px;
+}
+.page17>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-sub{
+  font-family: 'GangwonEdu_OTFLightA';
+}
+.page17>.container>.memo-box>.memo-sticker-box{
+  display: flex;
+  margin-left: 16px;
+}
+.page17>.container>.memo-box>.memo-sticker-box>.process-sticker{
+  margin-right: 48px;
+}
+.page17>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker{
+  width: 80px; height: 80px;
+  background-image: url("J-sitcker-circle.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page17>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker>a{
+  width: 80px; height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url(cursor_1.png), auto;
+}
+.page17>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker>a>span{
+  font-family: 'GangwonEdu_OTFLightA';
+  font-size: 20px;
+  cursor: url(cursor_1.png), auto;
+}
+.page17>.container>.sticker-box{
+  width: 100px; height: 132px;
+  position: absolute;
+  bottom: 85px; right: 20px;
+}
+.page17>.container>.sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page18 */
+.page18 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page18>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page18>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page18>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page18>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page18>.poster-box{
+  width: 600px; height: 880px;
+}
+.page18>.poster-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page19 */
+.page19>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page19>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page19>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page19>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page19>.book-ticker-img-3{
+  width: 100%; height: 100%;
+  background-image: url("teamprohect-g.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* page20 */
+.page20{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page20>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page20>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page20>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page20>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page20-sticker-box{
+  position: absolute;
+  width: 100px; height: 40px;
+  z-index: 1;
+}
+.page20-sticker-box-1{
+  transform: rotate(-45deg);
+  top: 40px; left: 10px;
+}
+.page20-sticker-box-2{
+  transform: rotate(-45deg);
+  bottom: 120px; right: 10px;
+}
+.page20-sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page20>.container>.redesign-img-box-1{
+  width: 500px; height: 700px;
+  border: 1px solid #F1F1F1;
+  margin-bottom: 50px;
+}
+.page20>.container>.redesign-img-box-1>img{
+  width: 100%; height: 100%;
+}
+.page20>.container>.pig-sticker-box{
+  position: absolute;
+  bottom: 50px; left: 110px;
+  width: 63px; height: 103px;
+  transform: rotate(-5deg);
+}
+.page20>.container>.pig-sticker-box>img{
+  width: 100%; height: 100%;
+}
+.page20>.container>.text-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page20>.container>.text-box>.c-re-text{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+/* page21 */
+.page21{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page21>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page21>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page21>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page21>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page21>.container>.memo-box{
+  width: 500px; height: 650px;
+  background-image: url("memo-grid.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page21>.container>.memo-box>.memo-title-box{
+  width: 500px; height: 100px;
+  margin-bottom: 72px;
+  position: relative;
+}
+.page21>.container>.memo-box>.memo-title-box>.m-title{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  position: absolute;
+  top:30px; left: 50px;
+  z-index: 1;
+}
+.page21>.container>.memo-box>.memo-title-box>.highlighter{
+  width: 336px; height: 40px;
+  background-color: #fcdda0;
+  opacity: 0.5;
+  position: absolute;
+  top:60px; left: 90px;
+}
+.page21>.container>.memo-box>.memo-title-box:hover>.highlighter{
+  background-color: #C7F3C0;
+}
+.page21>.container>.memo-box>.memo-content-box{
+  margin-bottom: 52px;
+}
+.page21>.container>.memo-box>.memo-content-box>ul>.memo-content-row{
+  display: flex;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  font-size: 28px;
+}
+.page21>.container>.memo-box>.memo-content-box>ul>.memo-content-4row{
+  margin-bottom: 0;
+}
+.page21>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-title{
+  font-family: 'GangwonEdu_OTFBoldA';
+  width: 100px;
+  margin-right: 12px;
+}
+.page21>.container>.memo-box>.memo-content-box>ul>.memo-content-row>.memo-sub{
+  font-family: 'GangwonEdu_OTFLightA';
+}
+.page21>.container>.memo-box>.memo-sticker-box{
+  display: flex;
+  margin-left: 16px;
+}
+.page21>.container>.memo-box>.memo-sticker-box>.process-sticker{
+  margin-right: 48px;
+}
+.page21>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker{
+  width: 80px; height: 80px;
+  background-image: url("T-sitcker-circle.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page21>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker>a{
+  width: 80px; height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url(cursor_1.png), auto;
+}
+.page21>.container>.memo-box>.memo-sticker-box>.memo-sticker>.back-sticker>a>span{
+  font-family: 'GangwonEdu_OTFLightA';
+  font-size: 20px;
+  cursor: url(cursor_1.png), auto;
+}
+.page21>.container>.sticker-box{
+  width: 100px; height: 132px;
+  position: absolute;
+  bottom: 85px; right: 20px;
+}
+.page21>.container>.sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page22 */
+.page22 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page22>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page22>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page22>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page22>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page22>.poster-box{
+  width: 600px; height: 880px;
+}
+.page22>.poster-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* page23 */
+.page23>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page23>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page23>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page23>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page23>.book-ticker-img-4{
+  width: 100%; height: 100%;
+  background-image: url("clonecoding-g.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* page24 */
+.page24 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page24>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page24>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page24>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page24>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page24>.memo-sticker-box{
+  width: 55px; height: 55px;
+  position: absolute;
+  top:25px; left: 275px;
+}
+.page24>.memo-sticker-box> img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page24>.memo-img-box{
+  width: 550px; height: 770px;
+}
+.page24>.memo-img-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page24>.memo-img-box>.blog-sticker-box{
+  width: 200px; height: 200px;
+  background-image: url('blog-memo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top:500px; left:270px;
+}
+.page24>.memo-img-box>.blog-sticker-box>.blog-emoji{
+  width: 74px; height: 82px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 80px; left: 62px;
+}
+.page24>.memo-img-box>.blog-sticker-box>.blog-emoji>a{
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+}
+.page24>.memo-img-box>.blog-sticker-box>.blog-emoji>a>img{
+  width: 100%; height: 100%;
+  transition: 0.3s;
+  cursor: url(cursor_1.png), auto;
+}
+.page24>.memo-img-box>.blog-sticker-box>.blog-emoji>a:hover>img{
+  transform: scale(1.1);
+}
+.page24>.memo-img-box>.blog-sticker-box>.blog-text{
+  width: 215px; height: 89px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 170px; left: 20px;
+}
+.page24>.memo-img-box>.blog-sticker-box>.blog-text>img{
+  width: 100%; height: 100%;
+}
+.page24>.check-box {
+  position: absolute;
+  top: 170px; left: 55px;
+  width: 70px; height: 80px;
+}
+.page24>.check-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page24>.text-box{
+  position: absolute;
+  top:190px; left: 130px;
+}
+.page24>.text-box>.title{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.page24>.text-box>ul{
+  margin-left: 30px;
+}
+.page24>.text-box>ul>.work-list{
+  margin-bottom: 20px;
+}
+.page24>.text-box>ul>.work-list>a{
+  display: inline-block;
+  position: relative;
+  cursor: url(cursor_1.png), auto;
+}
+.page24>.text-box>ul>.work-list>a::after{
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  opacity: 0.2;
+  width: 0; height: 40px;
+  background-color: #FFC599;
+  transition: width 0.5s ease-in-out;
+}
+.page24>.text-box>ul>.work-list>a:hover::after{
+  width: 100%;
+}
+.page24>.text-box>ul>.work-list>a>.content{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 32px;
+}
+/* page25 */
+.page25 {
+  position: relative;
+}
+.page25>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page25>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page25>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page25>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page25>.polaroid-box{
+  width: 280px; height: 310px;
+  position: absolute;
+}
+.page25>.polaroid-box-1{
+  top:40px; left: 30px;
+  transform: rotate( 3.5deg );
+}
+.page25>.polaroid-box-2{
+  top:140px; right: 30px;
+  transform: rotate( -5deg );
+}
+.page25>.polaroid-box-3{
+  bottom: 110px; left: 30px;
+  transform: rotate( 3.5deg );
+}
+.page25>.polaroid-box-4{
+  bottom:30px; right: 30px;
+  transform: rotate( -4deg );
+}
+.page25>.polaroid-box>.sticker-box{
+  width: 30px; height: 30px;
+  position: absolute;
+  top:-15px; left: 125px;
+  z-index: 1;
+}
+.page25>.polaroid-box>.sticker-box>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.page25>.polaroid-box>.pola-box{
+  width: 280px; height: 310px;
+  position: relative;
+}
+.page25>.polaroid-box>.pola-box>.img-box>a {
+  display: block;
+  width: 280px; height: 310px;
+  background-color: #fcdda0;
+}
+.page25>.polaroid-box>.pola-box>.img-box>a>img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  cursor: url(cursor_1.png), auto;
+}
+.page25>.polaroid-box>.pola-box>.text-box{
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page25>.polaroid-box>.pola-box>.text-box>a{
+  width: 280px; height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page25>.polaroid-box>.pola-box>.text-box>a>.pola-name{
+  font-family: 'Gaegu', sans-serif;
+  font-size: 24px;
+  cursor: url(cursor_1.png), auto;
+} 
+/* page26 */
+.page26{
+  background-color: #FFF4F4;
+  width: 600px; height: 880px;
+}
+.page26>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page26>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page26>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page26>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page26>.container{
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#picture-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 400px; height: 400px;
+}
+#picture-container>a{
+  width: 100%; height: 100%;
+}
+#picture-container>a>img {
+  width: 100%; height: 100%;
+  cursor: url(cursor_1.png), auto;
+}
+#sticker-container{
+  width: 500px; height: 300px;
+  background-image: url("deco-sticker-frame.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sticker-container>.deco-stickers{
+  position: absolute;
+  z-index: 5;
+}
+#berry {
+  width: 60px; height: 76px;
+  top: 500px; left: 80px;
+}
+#pup-flower{
+  width: 68px; height: 66px;
+  top: 500px; left:160px;
+}
+#rainbow {
+  width: 100px; height: 50px;
+  top: 530px; left:240px;
+}
+#two-leaf{
+  width: 37px; height: 38px;
+  top: 505px; left:340px;
+}
+#big-heart{
+  width: 130px; height: 110px;
+  top: 500px; left:390px;
+}
+#one-leaf{
+  width: 24px; height: 40px;
+  top: 575px; left:135px;
+  transform: rotate(-120deg);
+}
+#green-pig{
+  width: 54px; height: 57px;
+  top: 590px; left:74px;
+  transform: rotate(-77deg);
+}
+#ball{
+  width: 64px; height: 64px;
+  top: 605px; left:135px;
+}
+#som{
+  width: 140px; height: 67px;
+  top: 590px; left:220px;
+}
+#pink-heart{
+  width: 40px; height: 34px;
+  top: 600px; left:380px;
+  transform: rotate(-30deg);
+}
+#yel-flower{
+  width: 72px; height: 72px;
+  top: 670px; left:75px;
+}
+#hotpink-heart{
+  width: 38px; height: 35px;
+  top: 705px; left:165px;
+  transform: rotate(-30deg);
+}
+#yel-pig{
+  width: 74px; height: 43px;
+  top: 685px; left:210px;
+  transform: rotate(-13deg);
+}
+#born{
+  width: 95px; height: 58px;
+  top: 690px; left:295px;
+  transform: rotate(-13deg);
+}
+#blue-pig{
+  width: 34px; height: 35px;
+  top: 640px; left:380px;
+  transform: rotate(-160deg);
+}
+#sun{
+  width: 94px; height: 94px;
+  top: 650px; left:420px;
+}
+[draggable] {
+  cursor: move;
+}
+/* page27 */
+.page27 {
+  font-family: 'Gaegu', sans-serif;
+}
+.page27>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.page27>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.page27>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page27>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page27>.container>.back-bg{
+  width: 600px; height: 880px;
+  background-image: url('memo-pink.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page27-title-box{
+  height: 90px;
+  display: flex;
+  justify-content: center; align-items: center;
+  margin-bottom: 60px;
+}
+.page27-title-box>.memo-text{
+  font-size: 36px;
+  font-weight: bold;
+}
+.memo-con{
+  padding-left: 50px;
+}
+.playlist-box{
+  margin-bottom: 80px;
+}
+.playlist-box>.playlist-text-box{
+  display: flex;
+  margin-bottom: 28px;
+}
+.playlist-box>.playlist-text-box>.sticker-box{
+  width: 40px; height: 40px;
+  margin-right: 8px;
+}
+.playlist-box>.playlist-text-box>.sticker-box>img{
+  width: 100%; height: 100%;
+}
+.playlist-box>.playlist-text-box>.play-text-box>.play-text{
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+.playlist-box>.play-content-list{
+  display: flex;
+  padding-left: 15px;
+}
+.departure-box{
+  margin-right: 40px;
+  display: flex;
+  position: relative;
+}
+.departure-box>.sticker-box{
+  width: 30px; height: 30px;
+  position: absolute;
+  top:-15px; left: 85px;
+}
+.departure-box>.sticker-box>img{
+  width: 100%; height: 100%;
+}
+.departure-box>.departure-img-box{
+  width: 200px; height: 200px;
+  margin-right: 24px;
+}
+.departure-box>.departure-img-box>a{
+  display: block;
+  width: 200px; height: 200px;
+}
+.departure-box>.departure-img-box>a>img{
+  width: 100%; height: 100%;
+  cursor: url(cursor_1.png), auto;
+}
+.universe-box{
+  display: flex;
+  position: relative;
+}
+.universe-box>.sticker-box{
+  width: 30px; height: 30px;
+  position: absolute;
+  top:-15px; right: 110px;
+}
+.universe-box>.sticker-box>img{
+  width: 100%; height: 100%;
+}
+.universe-box>.universe-img-box{
+  width: 200px; height: 200px;
+  margin-right: 24px;
+}
+.universe-box>.universe-img-box>a{
+  display: block;
+  width: 200px; height: 200px;
+}
+.universe-box>.universe-img-box>a>img{
+  width: 100%; height: 100%;
+  cursor: url(cursor_1.png), auto;
+}
+.remember-box>.remember-text-box{
+  display: flex;
+  margin-bottom: 28px;
+}
+.remember-box>.remember-text-box>.sticker-box{
+  width: 40px; height: 40px;
+  margin-right: 8px;
+}
+.remember-box>.remember-text-box>.sticker-box>img{
+  width: 100%; height: 100%;
+}
+.remember-box>.remember-text-box>.remember-text>.remem-text{
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+.remember-box>.remember-content-box{
+  display: flex;
+  width: 500px;
+}
+.remember-box>.remember-content-box>.re-content{
+  display: flex;
+  flex-direction: column;
+}
+.remember-box>.remember-content-box>.re-content-1{
+  margin-right: 60px;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+.re-con-sticker-box{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.re-con-sticker-box>a{
+  display: block;
+  width: 180px; height: 180px;
+}
+.re-con-sticker-box>a>img{
+  width: 100%; height: 100%;
+  cursor: url(cursor_1.png), auto;
+}
+.re-con-memo-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.re-con-memo-box>.re-con-arrow-text{
+  font-size: 14px;
+  text-align: center;
+}
+.re-con-memo-box>.re-con-share-text{
+  font-size: 20px;
+  text-align: center;
+}
+/* 28page */
+.page28{
+  width: 100%; height: 100%;
+  background-image: url("back-cover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.page28>.cursor-box-top{
+  width: 55px; height: 55px;
+  position: absolute;
+  top: 0; left: 0;
+}
+.page28>.cursor-box-bottom{
+  width: 55px; height: 55px;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+.page28>.cursor-box-top:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page28>.cursor-box-bottom:hover{
+  cursor: url(cursor_1.png), auto;
+}
+.page28>.name-box{
+  width: 100%; height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px; left: 50%;
+  transform: translateX(-50%);
+}
+.page28>.name-box>.copy-name{
+  font-family: 'Gaegu', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}

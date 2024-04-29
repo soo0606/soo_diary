@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soo's Diary✏️</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- 제이쿼리 링크 -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- turn.js링크 -->
+  <script type="text/javascript" src="turn.min.js"></script>
+  <!-- gaegu 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="main-section">
+      <div class="index-pin-box"><img src="indexpin.png" alt="index-pin"></div>
+      <div class="index-memo-box">
+        <ul>
+          <li class="index-list index-list-1">
+            <a href="#" onclick="goToPage(2)">
+              <span class="list-name list-name-1">INTO MY DIART</span>
+            </a>
+          </li>
+          <li class="index-list index-list2">
+            <a href="#" onclick="goToPage(5)">
+              <span class="list-name list-name-2">ABOUT ME</span>
+            </a>
+          </li>
+          <li class="index-list index-list-3">
+            <a href="#"  onclick="goToPage(7)">
+              <span class="list-name list-name-3">REDESIGN</span>
+            </a>
+          </li>
+          <li class="index-list index-list-4">
+            <a href="#" onclick="goToPage(15)">
+              <span class="list-name list-name-4">APP DESIGN</span>
+            </a>
+          </li>
+          <li class="index-list index-list-5">
+            <a href="#" onclick="goToPage(19)">
+              <span class="list-name list-name-5">TEAM PROJECT</span>
+            </a>
+          </li>
+          <li class="index-list index-list-6">
+            <a href="#" onclick="goToPage(23)">
+              <span class="list-name list-name-6">CLONE CODING</span>
+            </a>
+          </li>
+          <li class="index-list index-list-7">
+            <a href="#" onclick="goToPage(27)">
+              <span class="list-name list-name-7">MY WORK</span>
+            </a>
+          </li>
+        </ul> 
+      </div>
+      <div id="flipbook">
+        <div class="page1">
+          <div class="cover-img-box">
+            <div class="cursor-box-top"></div>
+            <div class="logo-rail">
+              <div class="cover-logo-box">
+                <img class="d-logo" src="d-logo3.svg" alt="오리로고">
+              </div>
+            </div>
+          </div>
+          <div class="click-box"></div>
+        </div>
+        <div class="page2">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="back-bg"></div>
+        </div>
+        <div class="page3">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="intro">
+            <div class="intro-img-box"><img class="d-logo" src="d-logo3.svg" alt="오리로고"></div>
+            <div class="intro-text-box">
+              <p class="goal-title">Soo's Goal</p>
+              <p class="goal-content">늘 성실하게 노력하는 웹디자이너</p>
+            </div>
+          </div>
+        </div>
+        <div class="page4"> 
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="page4-sticker-box">
+            <img src="sticker-y-wave.png" alt="노란스티커">
+          </div>
+          <div class="introduce-img-box">
+            <img src="introduce-img.png" alt="소개사진" class="introduce-img">
+          </div>
+        </div>      
+        <div class="page5" id="page5">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="aboutme-box">
+              <div class="title-aboutme">
+                <p class="aboutme-title">About Me</p>
+              </div>
+              <div class="aboutme-content"> 
+                <ul class="aboutlist info-list">
+                  <li>
+                    <span class="list-title">이름</span>
+                    <span class="list-content">이수정(Lee su jeong)</span>
+                  </li>
+                  <li>
+                    <span class="list-title">생년월일</span>
+                    <span class="list-content">1995.06.10.</span>
+                  </li>
+                  <li class="list-margin0">
+                    <span class="list-title">이메일</span>
+                    <span class="list-content">soo610813@gmail.com</span>
+                  </li>
+                </ul>
+                <ul class="aboutlist edu-career-list">
+                  <li>
+                    <span class="list-title">학력·경력</span>
+                    <span class="list-content">2017.08 우송대학교 유아교육과 졸업</span>
+                  </li>
+                  <li>
+                    <span class="list-title"> </span>
+                    <span class="list-content">2018.03 ~ 2023.02 동대전유치원</span>
+                  </li>
+                  <li class="list-margin0">
+                    <span class="list-title"> </span>
+                    <span class="list-content">2023.02 ~ 2023.12 SBS아카데미 웹학과 수료</span>
+                  </li>
+                </ul>
+                <ul class="aboutlist certification-list">
+                  <li>
+                    <span class="list-title">자격증</span>
+                    <span class="list-content">유치원정교사 2급</span>
+                  </li>
+                  <li>
+                    <span class="list-title"></span>
+                    <span class="list-content">보육교사 2급</span>
+                  </li>
+                  <li>
+                    <span class="list-title"></span>
+                    <span class="list-content">운전면허 2종보통</span>
+                  </li>
+                  <li>
+                    <span class="list-title"></span>
+                    <span class="list-content">GTQ 1급</span>
+                  </li>
+                  <li>
+                    <span class="list-title"></span>
+                    <span class="list-content">컴퓨터 그래픽스 운용기능사</span>
+                  </li>
+                  <li class="list-margin0">
+                    <span class="list-title"></span>
+                    <span class="list-content">웹디자인기능사(필기)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills-box">
+              <div class="title-skills">
+                <p class="skills-title">Skills</p>
+              </div>
+              <div class="skills-content">
+                <ul>
+                  <li><img src="skill-html.png" alt="html"></li>
+                  <li><img src="skill-css.png" alt="css"></li>
+                  <li><img src="skill-js.png" alt="js"></li>
+                  <li><img src="skill-jquery.png" alt="jquery"></li>
+                  <li><img src="skill-figma.png" alt="figma"></li>
+                  <li><img src="skill-ps.png" alt="ps"></li>
+                  <li><img src="skill-ai.png" alt="ai"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div> 
+        <div class="page6">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="poster-box">
+            <img src="poster-1.png" alt="동물액자포스터">
+          </div> 
+        </div>
+        <div class="page7" id="page7">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="book-ticker book-ticker-img-1"></div>
+        </div>
+        <div class="page8">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="page8-container">
+            <div class="page8-sticker-box page8-sticker-box-1">
+              <img src="C-sticker-wave.png" alt="빨간스티커">
+            </div>
+            <div class="page8-sticker-box page8-sticker-box-2">
+              <img src="C-sticker-wave.png" alt="빨간스티커">
+            </div>
+            <div class="redesign-img-box-1">
+              <img src="CARTIERPREVIEW.png" alt="까르띠에프리뷰">
+            </div>
+          </div>
+        </div>
+        <div class="page9">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="memo-box">
+              <div class="memo-title-box">
+                <p class="m-title">CARTIER</p>
+                <div class="highlighter"></div>
+              </div>
+              <div class="memo-content-box">
+                <ul>
+                  <li class="memo-content-row memo-content-1row">
+                    <span class="memo-title">유형</span>
+                    <span class="memo-sub">리디자인 & 반응형 웹 페이지</span>
+                  </li>
+                  <li class="memo-content-row memo-content-2row">
+                    <span class="memo-title">구성</span>
+                    <span class="memo-sub">메인 페이지</span>
+                  </li>
+                  <li class="memo-content-row memo-content-3row">
+                    <span class="memo-title">참여도</span>
+                    <span class="memo-sub">100%(1인 프로젝트)</span>
+                  </li>
+                  <li class="memo-content-row memo-content-4row">
+                    <span class="memo-title">사용툴</span>
+                    <span class="memo-sub">Figma, Html, Css, JQuery</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="memo-sticker-box">
+                <div class="memo-sticker process-sticker">
+                  <div class="back-sticker">
+                    <a href="https://soo0606.github.io/CARTIER_process/" target="_blank">
+                      <span>Process</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="memo-sticker original-sticker">
+                  <div class="back-sticker">
+                    <a href="https://www.cartier.com/ko-kr/home?gad_source=1&gclid=Cj0KCQiAuqKqBhDxARIsAFZELmJJb_X6m9bvnr6Xm9auS62uPjAiuZ2GTiffh1AXiP7xSijDdO7CaucaAqgWEALw_wcB&gclsrc=aw.ds" target="_blank">
+                      <span>Original</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="memo-sticker redesign-sticker">
+                  <div class="back-sticker">
+                    <a href="https://soo0606.github.io/CARTIER_Redesign/" target="_blank">
+                      <span>Redesign</span>
+                    </a>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="sticker-box">
+              <img src="C-sticker-flower.png" alt="빨간튤립스티커">
+            </div>
+          </div>
+        </div>
+        <div class="page10">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="page10-container">
+            <div class="page10-sticker-box page10-sticker-box-1">
+              <img src="A-sticker-wave.png" alt="노랑스티커">
+            </div>
+            <div class="page10-sticker-box page10-sticker-box-2">
+              <img src="A-sticker-wave.png" alt="노랑스티커">
+            </div>
+            <div class="redesign-img-box-1">
+              <img src="ACQUAPREVIEW.png" alt="아쿠아디파르마프리뷰">
+            </div>
+          </div>
+        </div>
+        <div class="page11">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="memo-box">
+              <div class="memo-title-box">
+                <p class="m-title">Acquadiparma</p>
+                <div class="highlighter"></div>
+              </div>
+              <div class="memo-content-box">
+                <ul>
+                  <li class="memo-content-row memo-content-1row">
+                    <span class="memo-title">유형</span>
+                    <span class="memo-sub">리디자인</span>
+                  </li>
+                  <li class="memo-content-row memo-content-2row">
+                    <span class="memo-title">구성</span>
+                    <span class="memo-sub">메인 페이지</span>
+                  </li>
+                  <li class="memo-content-row memo-content-3row">
+                    <span class="memo-title">참여도</span>
+                    <span class="memo-sub">100%(1인 프로젝트)</span>
+                  </li>
+                  <li class="memo-content-row memo-content-4row">
+                    <span class="memo-title">사용툴</span>
+                    <span class="memo-sub">Figma, Html, Css, JQuery</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="memo-sticker-box">
+                <div class="memo-sticker process-sticker">
+                  <div class="back-sticker">
+                    <a href="https://soo0606.github.io/AcquaDiParma_process/" target="_blank">
+                      <span>Process</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="memo-sticker original-sticker">
+                  <div class="back-sticker">
+                    <a href="https://www.acquadiparma.kr/" target="_blank">
+                      <span>Original</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="memo-sticker redesign-sticker">
+                  <div class="back-sticker">
+                    <a href="https://soo0606.github.io/AcquaDiParma_Redesign/" target="_blank">
+                      <span>Redesign</span>
+                    </a>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="sticker-box draggable" draggable="true">
+              <img src="https://i.postimg.cc/gjzJCs1Q/image.png
+              " alt="노란튤립스티커">
+            </div>
+          </div>
+        </div>
+        <div class="page12">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="page12-sticker-box page12-sticker-box-1">
+              <img src="D-sitcker-wave.png" alt="하늘스티커">
+            </div>
+            <div class="page12-sticker-box page12-sticker-box-2">
+              <img src="D-sitcker-wave.png" alt="하늘스티커">
+            </div>
+            <div class="redesign-img-box-1">
+              <img src="DOKDOPREVIEW.png" alt="독도박물관프리뷰">
+            </div>
+          </div>
+        </div>
+        <div class="page13">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="memo-box">
+              <div class="memo-title-box">
+                <p class="m-title">Dokdomuseum</p>
+                <div class="highlighter"></div>
+              </div>
+              <div class="memo-content-box">
+                <ul>
+                  <li class="memo-content-row memo-content-1row">
+                    <span class="memo-title">유형</span>
+                    <span class="memo-sub">리디자인</span>
+                  </li>
+                  <li class="memo-content-row memo-content-2row">
+                    <span class="memo-title">구성</span>
+                    <span class="memo-sub">메인 페이지</span>
+                  </li>
+                  <li class="memo-content-row memo-content-3row">
+                    <span class="memo-title">참여도</span>
+                    <span class="memo-sub">100%(1인 프로젝트)</span>
+                  </li>
+                  <li class="memo-content-row memo-content-4row">
+                    <span class="memo-title">사용툴</span>
+                    <span class="memo-sub">Figma, Html, Css, JQuery</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="memo-sticker-box">
+                <div class="memo-sticker process-sticker">
+                  <div class="back-sticker">
+                    <a href="https://soo0606.github.io/dokdomuseum_process/" target="_blank">
+                      <span>Process</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="memo-sticker original-sticker">
+                  <div class="back-sticker">
+                    <a href="https://www.dokdomuseum.go.kr/ko/main.do" target="_blank">
+                      <span>Original</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="memo-sticker redesign-sticker">
+                  <div class="back-sticker">
+                    <a href="https://soo0606.github.io/dokdomuseum_Redesign/" target="_blank">
+                      <span>Redesign</span>
+                    </a>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="sticker-box draggable" draggable="true">
+              <img src="D-sticker-flower.png" alt="하늘튤립스티커">
+            </div>
+          </div>
+        </div>
+        <div class="page14">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="poster-box">
+            <img src="poster-2.png" alt="주차포스터">
+          </div> 
+        </div>
+        <div class="page15" id="page15">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="book-ticker book-ticker-img-2"></div>
+        </div>
+        <div class="page16">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="page16-sticker-box page16-sticker-box-1">
+              <img src="J-sticker-wave.png" alt="파랑스티커">
+            </div>
+            <div class="page16-sticker-box page16-sticker-box-2">
+              <img src="J-sticker-wave.png" alt="파랑스티커">
+            </div>
+            <div class="redesign-img-box-1">
+              <img src="JOOCHATPREVIEW.png" alt="주찾어플프리뷰">
+            </div>
+          </div>
+        </div>
+        <div class="page17">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="memo-box">
+              <div class="memo-title-box">
+                <p class="m-title">App Design</p>
+                <div class="highlighter"></div>
+              </div>
+              <div class="memo-content-box">
+                <ul>
+                  <li class="memo-content-row memo-content-1row">
+                    <span class="memo-title">유형</span>
+                    <span class="memo-sub">주차 앱 기획 & 디자인</span>
+                  </li>
+                  <li class="memo-content-row memo-content-2row">
+                    <span class="memo-title">구성</span>
+                    <span class="memo-sub">프로세스, 프로토타입</span>
+                  </li>
+                  <li class="memo-content-row memo-content-3row">
+                    <span class="memo-title">참여도</span>
+                    <span class="memo-sub">100%(1인 프로젝트)</span>
+                  </li>
+                  <li class="memo-content-row memo-content-4row">
+                    <span class="memo-title">사용툴</span>
+                    <span class="memo-sub">Figma, Ai, Ps</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="memo-sticker-box">
+                <div class="memo-sticker process-sticker">
+                  <div class="back-sticker">
+                    <a href="https://soo0606.github.io/jochat_process/" target="_blank">
+                      <span>Process</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="memo-sticker proto-sticker">
+                  <div class="back-sticker">
+                    <a href="https://www.figma.com/proto/xu2EpTlBZ6jVOBmrbRHD4F/%EC%9D%B4%EC%88%98%EC%A0%95?type=design&node-id=0-1&viewport=-23402%2C-14967%2C0.39&t=gJnuwS2QZNvObavc-0&scaling=min-zoom&starting-point-node-id=1342%3A48191" target="_blank">
+                      <span>Prototype</span>
+                    </a>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="sticker-box draggable" draggable="true">
+              <img src="J-sticker-flower.png" alt="파랑튤립스티커">
+            </div>
+          </div>
+        </div>
+        <div class="page18">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="poster-box"><img src="poster-3.png" alt="의사포스터"></div> 
+        </div>
+        <div class="page19" id="page19">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="book-ticker book-ticker-img-3"></div>
+        </div>
+        <div class="page20">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="page20-sticker-box page20-sticker-box-1">
+              <img src="T-sticker-wave.png" alt="연두스티커">
+            </div>
+            <div class="page20-sticker-box page20-sticker-box-2">
+              <img src="T-sticker-wave.png" alt="연두스티커">
+            </div>
+            <div class="redesign-img-box-1">
+              <img src="TEAMPROJECTPREVIEW.png" alt="병원어플프리뷰">
+            </div> 
+          </div>
+        </div>
+        <div class="page21">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="memo-box">
+              <div class="memo-title-box">
+                <p class="m-title">Team Projeck</p>
+                <div class="highlighter"></div>
+              </div>
+              <div class="memo-content-box">
+                <ul>
+                  <li class="memo-content-row memo-content-1row">
+                    <span class="memo-title">유형</span>
+                    <span class="memo-sub">병원 앱 기획 & 디자인</span>
+                  </li>
+                  <li class="memo-content-row memo-content-2row">
+                    <span class="memo-title">구성</span>
+                    <span class="memo-sub">프로세스, 프로토타입</span>
+                  </li>
+                  <li class="memo-content-row memo-content-3row">
+                    <span class="memo-title">참여도</span>
+                    <span class="memo-sub">기획 20%,디자인 20%,<br>프로토타입 80%,프로세스 20%</span>
+                  </li>
+                  <li class="memo-content-row memo-content-4row">
+                    <span class="memo-title">사용툴</span>
+                    <span class="memo-sub">Figma, Ai, Ps</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="memo-sticker-box">
+                <div class="memo-sticker process-sticker">
+                  <div class="back-sticker">
+                    <a href="https://soo0606.github.io/teamprocess_dakdae/" target="_blank">
+                      <span>Process</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="memo-sticker proto-sticker">
+                  <div class="back-sticker">
+                    <a href="https://www.figma.com/proto/SrUyb6bwSXu2umM1VDimFw/team_Dakdae?type=design&node-id=0-1&viewport=689%2C-275%2C0.03&t=vnfZHEOZkCvszeez-0&scaling=min-zoom&starting-point-node-id=119%3A17179" target="_blank">
+                      <span>Prototype</span>
+                    </a>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="sticker-box draggable" draggable="true">
+              <img src="T-sticker-flower.png" alt="연두튤립스티커">
+            </div>
+          </div>
+        </div>
+        <div class="page22">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="poster-box">
+            <img src="poster-4.png" alt="윈도우창포스터">
+          </div> 
+        </div>
+        <div class="page23" id="page23"> 
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="book-ticker book-ticker-img-4"></div>
+        </div>
+        <div class="page24">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="memo-sticker-box">
+            <img src="todolist-circle.png" alt="주황스티커">
+          </div>
+          <div class="memo-img-box">
+            <img src="todolist-memo.png" alt="작업리스트메모장">
+            <div class="blog-sticker-box">
+              <div class="blog-emoji">
+                <a href="https://ssuu-77.tistory.com/category/Soo%27s%20study/clonecoding" target="_blank"  title="Go to Soo's blog-!!">
+                  <img src="blog-memo-emoji.png" alt="집 이모지">
+                </a>
+              </div>
+              <div class="blog-text">
+                <img src="blog-memo-content.png" alt="필기내용">
+              </div>
+            </div>
+          </div> 
+          <div class="check-box">
+            <img src="todolist-check.png" alt="체크표시">
+          </div>
+          <div class="text-box">
+            <p class="title">Clone Coding</p>
+            <ul>
+              <li class="work-list">
+                <a href="https://codepen.io/soo610/pen/MWLNjap?editors=0100" target="_blank"><span class="content content-1">파리바게트</span></a>
+              </li>
+              <li class="work-list">
+                <a href="https://codepen.io/soo610/pen/bGZGjwL" target="_blank"><span class="content content-2">롯데문화센터</span></a>
+              </li>
+              <li class="work-list">
+                <a href="https://codepen.io/soo610/pen/yLwyLyq" target="_blank"><span class="content content-3">리라브</span></a>
+              </li>
+              <li class="work-list">
+                <a href="https://codepen.io/soo610/pen/GRzVqae?editors=1010" target="_blank"><span class="content content-4">네이처리퍼블릭</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="page25">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="polaroid-box polaroid-box-1">
+            <div class="sticker-box">
+              <img src="todolist-circle.png" alt="주황스티커">
+            </div>
+            <div class="pola-box">
+              <div class="img-box">
+                <a href="https://codepen.io/soo610/pen/MWLNjap?editors=0100" target="_blank"><img src="memo-paris.png" alt="메모-손그림-파리바게트"></a></div>
+              <div class="text-box">
+                <a href="https://codepen.io/soo610/pen/MWLNjap?editors=0100" target="_blank"><span class="pola-name">파리바게트</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="polaroid-box polaroid-box-2">
+            <div class="sticker-box">
+              <img src="https://i.postimg.cc/28DyvmFv/image.png" alt="주황스티커">
+            </div>
+            <div class="pola-box">
+              <div class="img-box">
+                <a href="https://codepen.io/soo610/pen/GRzVqae?editors=1010" target="_blank"><img src="memo-nature.png" alt="메모-손그림-네이처리퍼블릭"></a></div>
+              <div class="text-box">
+                <a href="https://codepen.io/soo610/pen/GRzVqae?editors=1010" target="_blank"><span class="pola-name">네이처리퍼블릭</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="polaroid-box polaroid-box-3">
+            <div class="sticker-box">
+              <img src="https://i.postimg.cc/28DyvmFv/image.png" alt="주황스티커">
+            </div>
+            <div class="pola-box">
+              <div class="img-box">
+                <a href="https://codepen.io/soo610/pen/yLwyLyq" target="_blank"><img src="memo-rerave.png" alt="메모-손그림-리라브"></a></div>
+              <div class="text-box">
+                <a href="https://codepen.io/soo610/pen/yLwyLyq" target="_blank"><span class="pola-name">리라브</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="polaroid-box polaroid-box-4">
+            <div class="sticker-box">
+              <img src="https://i.postimg.cc/28DyvmFv/image.png" alt="주황스티커">
+            </div>
+            <div class="pola-box">
+              <div class="img-box">
+                <a href="https://codepen.io/soo610/pen/bGZGjwL" target="_blank"><img src="memo-lotte.png" alt="메모-손그림-롯데문화센터"></a></div>
+              <div class="text-box">
+                <a href="https://codepen.io/soo610/pen/bGZGjwL" target="_blank"><span class="pola-name">롯데문화센터</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page26">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="picture-container" id="picture-container">
+              <a href="https://soo0606.github.io/sompola_deco/" target="_blank"><img src="som_pol.png" alt="강아지그림폴라로이드"></a>
+            </div>
+            <div class="sticker-container" id="sticker-container">
+              <img draggable="true" src="deco-berry.png" alt="딸기" class="deco-stickers" id="berry">
+              <img draggable="true" src="deco-flower-purple.png" alt="보라꽃" class="deco-stickers" id="pup-flower">
+              <img draggable="true" src="deco-rainbow.png" alt="무지개" class="deco-stickers" id="rainbow">
+              <img draggable="true" src="deco-two-leaf.png" alt="잎둘" class="deco-stickers" id="two-leaf">
+              <img draggable="true" src="deco-big-heart.png" alt="큰하트" class="deco-stickers" id="big-heart">
+              <img draggable="true" src="deco-one-leaf.png" alt="잎하나" class="deco-stickers" id="one-leaf">
+              <img draggable="true" src="deco-green-pig.png" alt="초록돼지꼬리" class="deco-stickers" id="green-pig">
+              <img draggable="true" src="deco-ball.png" alt="공" class="deco-stickers" id="ball">
+              <img draggable="true" src="deco-som.png" alt="영어글자 솜" class="deco-stickers" id="som">
+              <img draggable="true" src="deco-pink-heart.png" alt="분홍하트" class="deco-stickers" id="pink-heart">
+              <img draggable="true" src="deco-flower-yellow.png" alt="노란꽃" class="deco-stickers" id="yel-flower">
+              <img draggable="true" src="deco-hotpink-heart.png" alt="진한분홍하트" class="deco-stickers" id="hotpink-heart">
+              <img draggable="true" src="deco-yellow-pig.png" alt="노랑돼지꼬리" class="deco-stickers" id="yel-pig">
+              <img draggable="true" src="deco-pinkborn.png" alt="분홍색뼈모양장난감" class="deco-stickers" id="born">
+              <img draggable="true" src="deco-blue-pig.png" alt="파랑돼지꼬리" class="deco-stickers" id="blue-pig">
+              <img draggable="true" src="deco-sun.png" alt="해" class="deco-stickers" id="sun">
+            </div>
+          </div>
+        </div> 
+        <div class="page27" id="page27">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="container">
+            <div class="back-bg">
+              <div class="page27-title-box">
+                <span class="memo-text">MEMO</span>
+              </div>
+              <div class="memo-con">
+                <div class="playlist-box">
+                  <div class="playlist-text-box">
+                    <div class="sticker-box"><img src="memo-blue-flower.png" alt="꽃 스티커"></div>
+                    <div class="play-text-box"><span class="play-text">Nowaday, My Playlist-♪</span></div>
+                  </div>
+                  <div class="play-content-list">
+                    <div class="departure-box">
+                      <div class="sticker-box"><img src="memo-c-pink.png" alt="스티커"></div>
+                      <div class="departure-img-box">
+                        <a href="https://drive.google.com/file/d/1luSEIkvHIO6ULUjGHJJ4H4cF7DiYA-Hw/view?usp=sharing" target="_blank"><img src="albumre_KDR.png" alt="출발 리디자인"></a>
+                      </div>
+                    </div>
+                    <div class="universe-box">
+                      <div class="sticker-box"><img src="memo-c-pink.png" alt="스티커"></div>
+                      <div class="universe-img-box">
+                        <a href="https://drive.google.com/file/d/1iZk4dzrnQBF4TZu11DUErAldgzuguX7U/view?usp=sharing" target="_blank"><img src="albumre_bol4.png" alt="우주를줄게 리디자인"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="remember-box">
+                  <div class="remember-text-box">
+                    <div class="sticker-box"><img src="memo-blue-flower.png" alt="꽃 스티커"></div>
+                    <div class="remember-text"><span class="remem-text">Remember-!</span></div>
+                  </div>
+                  <div class="remember-content-box">
+                    <div class="re-content re-content-1">
+                      <div class="re-con-sticker-box gadasil-sticker-box">
+                        <a href="https://soo0606.github.io/card_news_gardasil/" target="_blank"><img src="sticker-gardasil.png" alt="가다실주사스티커"></a>
+                      </div>
+                      <div class="re-con-memo-box gadasil-memo-box">
+                          <p class="re-con-arrow-text">▲</p>
+                          <span class="re-con-share-text gadasil-share-text">가다실9가 카드뉴스</br>
+                            단톡방에 공유하기-!</span>
+                      </div>
+                    </div>
+                    <div class="re-content re-content-2">
+                      <div class="re-con-sticker-box blusher-sticker-box">
+                        <a href="https://soo0606.github.io/A-pieu_Detailedpage/" target="_blank"><img src="sticker-blusher.png" alt="블러셔스티커"></a>
+                      </div>
+                      <div class="re-con-memo-box blusher-memo-box">
+                        <p class="re-con-arrow-text">▲</p>
+                        <span class="re-con-share-text blusher-share-text">구매예정 블러셔</br>
+                          복숭아pick!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page28">
+          <div class="cursor-box-top"></div>
+          <div class="cursor-box-bottom"></div>
+          <div class="name-box">
+            <span class="copy-name">© 2024 by Soo's right reserved</span>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </main>
+<script src="main.js"></script>
+</body>
+</html>
